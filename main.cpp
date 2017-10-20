@@ -4,7 +4,7 @@ using namespace std;
 int menu();
 int ejercicio1(int);
 int ejercicio2(int, int, int);
-int ejercicio3();
+int ejercicio3(int);
 
 int main(){
 	bool resp = true;
@@ -33,8 +33,16 @@ int main(){
 				   }
 
 			case 3:{
-					
+				int numero;
+				cout<<"Ingrese numero par y menor a 150"<<endl;
+				cin>>numero;
 
+				while(numero%2!=0||numero>150){
+					cout<<"Numero invalido!"<<endl<<"Ingrese nuevo numero"<<endl;
+					cin>>numero;
+				}
+				ejercicio3(numero);
+				
 
 				 break;
 
@@ -98,5 +106,18 @@ int ejercicio2(int a, int b, int x){
 	return suma;
 }
 
- 
+int ejercicio3(int numero){
+	int suma = 0;
+	for(int i=1;i<=numero;i++){
+		if(primeNum(i)==true){
+			int resta = numero - i;
+			if(primeNum(resta)==true){
+				cout<<"1 numero primo es:"<<resta<<endl<<"2 numero primo es:"<<i<<endl;
+				suma = resta + i;
+				break;
+			}
+		}
+	}
+	return suma;
+}
 
