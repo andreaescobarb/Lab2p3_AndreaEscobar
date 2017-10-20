@@ -4,7 +4,7 @@ using namespace std;
 int menu();
 int ejercicio1(int);
 int ejercicio2(int, int, int);
-
+int ejercicio3();
 
 int main(){
 	bool resp = true;
@@ -28,7 +28,7 @@ int main(){
 				cin>>b;
 				cout<<"Ingrese numero x"<<endl;
 				cin>>x;
-				cout<<ejercicio2(a, b, x);  
+				cout<<"La suma es: "<<endl<<ejercicio2(a, b, x)<<endl;  
 				 break; 
 				   }
 
@@ -89,7 +89,7 @@ int ejercicio1(int numero){
 
 int ejercicio2(int a, int b, int x){
 	int suma=0;
-	for(int i=1;i<x;i++){
+	for(int i=1;i<=x;i++){
 		if(i%a==0 || i%b==0){
 			suma+=i;
 
@@ -98,5 +98,5 @@ int ejercicio2(int a, int b, int x){
 	return suma;
 }
 
-
+ 
 
