@@ -89,7 +89,7 @@ int ejercicio1(int numero){
 
 int ejercicio2(int a, int b, int x){
 	int suma=0;
-	for(int i=1;i<=x;i++){
+	for(int i=1;i<x;i++){
 		if(i%a==0 || i%b==0){
 			suma+=i;
 
