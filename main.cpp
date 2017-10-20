@@ -5,6 +5,7 @@ int menu();
 int ejercicio1(int);
 int ejercicio2(int, int, int);
 int ejercicio3(int);
+int primeNum(int);
 
 int main(){
 	bool resp = true;
