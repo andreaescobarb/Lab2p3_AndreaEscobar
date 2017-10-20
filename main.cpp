@@ -3,6 +3,7 @@ using namespace std;
 
 int menu();
 int ejercicio1(int);
+int ejercicio2(int, int, int);
 
 
 int main(){
@@ -13,12 +14,21 @@ int main(){
 				int num;
 				cout<<"Ingrese un numero "<<endl;
 				cin>>num;
-				cout<<ejercicio1(num)<<endl;   
+				
+				cout<<"La suma es: "<<endl<<ejercicio1(num)<<endl;   
 				 break;
 				   }
 			case 2:{
-
-				  
+				int a;
+				int b;
+				int x;
+				cout<<"Ingrese numero a"<<endl;
+				cin>>a;
+				cout<<"Ingrese numero b"<<endl;
+				cin>>b;
+				cout<<"Ingrese numero x"<<endl;
+				cin>>x;
+				cout<<ejercicio2(a, b, x);  
 				 break; 
 				   }
 
@@ -72,8 +82,20 @@ int ejercicio1(int numero){
 			primos+=i;
 		}
 	}
+	primos+=1;
 
 	return primos;
+}
+
+int ejercicio2(int a, int b, int x){
+	int suma=0;
+	for(int i=1;i<=x;i++){
+		if(i%a==0 || i%b==0){
+			suma+=i;
+
+		}
+	}
+	return suma;
 }
 
 
